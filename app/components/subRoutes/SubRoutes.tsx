@@ -21,9 +21,6 @@ export default function SubRoutes({ routes }) {
 		console.log(availableRoutes);
 	}
 
-	// Select with 5 options, 5km, 10km, half, full, ultra
-	// onChange - filter by length
-
 	return (
 		<div id='sub-routes' className='py-3'>
 			<h3 className='py-3 text-2xl'>Find a route</h3>

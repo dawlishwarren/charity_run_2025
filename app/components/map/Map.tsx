@@ -1,40 +1,14 @@
 'use client';
 
-import { MapContainer, TileLayer, Polyline } from 'react-leaflet';
-import polyline from '@mapbox/polyline';
-
-import 'leaflet/dist/leaflet.css';
-import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
-import 'leaflet-defaulticon-compatibility';
+import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 
-const Map = ({ ...props }) => {
-	const encodedPolyline = props.polyline;
-	const decodedPolyline = polyline.decode(encodedPolyline);
+const ClientMap = dynamic(() => import('./DynamicMap'), { ssr: false });
+
+export default function Map(props) {
 	const [isClient, setIsClient] = useState(false);
 	useEffect(() => {
 		setIsClient(true);
 	}, []);
-
-	return isClient ? (
-		<MapContainer
-			className='w-full aspect-3/2 rounded-lg my-3'
-			bounds={decodedPolyline}
-			zoom={12}
-			scrollWheelZoom={false}>
-			<TileLayer
-				attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-				url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-			/>
-
-			<Polyline
-				positions={decodedPolyline}
-				pathOptions={{ weight: 6, color: 'rgba(236, 71, 52, 0.9)' }}
-			/>
-		</MapContainer>
-	) : (
-		<p>Loading map</p>
-	);
-};
-
-export default Map;
+	return isClient ? <ClientMap props={props} /> : <p>Map Loading!</p>;
+}
