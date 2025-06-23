@@ -21,7 +21,7 @@ export default async function Page() {
 	const fullRoute = await getRouteById('3347513386089739026');
 	return (
 		<main className='flex flex-col basis-auto justify-center md:items-center p-7 gap-y-14 bg-cyan-100'>
-			<h1 className='font-mono text-5xl'>Great Mission Mars Run</h1>
+			<h1 className='font-mono text-5xl'>Mission Mars Run</h1>
 			<section id='summary' className='md:w-4xl'>
 				<h2 className='text-3xl'>Summary</h2>
 				<p className='py-3'>
@@ -51,10 +51,13 @@ export default async function Page() {
 			</section>
 			<Training stats={yearToDate} activities={activities} />
 			<section id='get-involved' className='md:w-4xl'>
-				<h2 className='text-3xl'>Get involved</h2>
-				<p className='py-3'>Run with me:</p>
-				<p>Volunteer:</p>
-				{/* Link to jotform */}
+				<h2 className='text-3xl py-3'>Get involved</h2>
+				<a
+					className='block bg-red-700 hover:bg-red-500 text-white p-3 w-full text-center rounded-lg'
+					href={`https://form.jotform.com/251737068320051`}
+					target={'_blank'}>
+					Fill in your details
+				</a>
 			</section>
 			<section id='route' className='md:w-4xl'>
 				<h2 className='text-3xl'>The Route</h2>
@@ -76,6 +79,7 @@ export default async function Page() {
 			</section>
 			<section id='timings'>
 				<h2 className='text-3xl'>Timings</h2>
+				<p>Coming soon!</p>
 				{/* TODO: Look into importing google sheets data */}
 				{/* Use data to create Table component */}
 				{/* Display */}

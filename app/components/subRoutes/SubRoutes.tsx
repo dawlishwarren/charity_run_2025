@@ -24,10 +24,15 @@ export default function SubRoutes({ routes }) {
 	return (
 		<div id='sub-routes' className='py-3'>
 			<h3 className='py-3 text-2xl'>Find a route</h3>
-			<h4 className='py-2 text-1xl'>Or filter by length:</h4>
+			<p className='text-1xl'>
+				Along the way are 14 rest stops, the routes between these rest stops are
+				listed below in ascending order of length.
+			</p>
+			<h4 className='py-2 text-1xl'>Additionally, you can filter by length:</h4>
 			<select
 				name='length'
 				id='length'
+				className='bg-gray-100 w-xs md:w-md py-2 rounded-lg border'
 				onChange={filterByLength}
 				defaultValue='none'>
 				<option value='5'>5km</option>
@@ -37,7 +42,7 @@ export default function SubRoutes({ routes }) {
 				<option value='42'>Marathon</option>
 				<option value='none'>None</option>
 			</select>
-			<ul className='grid grid-cols-2 gap-8'>
+			<ul className='md:grid md:grid-cols-2 gap-8'>
 				{availableRoutes.map(
 					(route, iteration) =>
 						route.description != null &&
