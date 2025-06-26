@@ -44,7 +44,7 @@ export default async function Page() {
 				</p>
 				<a
 					className='block bg-purple-900 hover:bg-purple-700 text-white p-3 w-full text-center rounded-lg'
-					href='https://www.justgiving.com/page/alex-warren-mission-mars-run'
+					href='https://www.justgiving.com/page/alex-warren-leeds-liverpool-run'
 					target='_blank'>
 					Justgiving Page
 				</a>
