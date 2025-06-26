@@ -14,7 +14,7 @@ export default function Training({ stats, activities }) {
 	});
 	return (
 		<section id='training' className='md:w-4xl md:flex'>
-			<div id='col_1' className='basis-1/4'>
+			<div id='col_1' className='md:basis-1/4'>
 				<h2 className='text-3xl'>My training</h2>
 				<p>{'Stats (year-to-date)'}</p>
 				<h4 className='underline'>Hours</h4>
@@ -29,7 +29,7 @@ export default function Training({ stats, activities }) {
 				<h4 className='underline'>Runs</h4>
 				<p className='pb-2'>{stats.count}</p>
 			</div>
-			<div id='col_2' className='basis-3/4'>
+			<div id='col_2' className='w-sm aspect-3/1 md:basis-3/4'>
 				<TrainingCalendar data={calendarData} />
 			</div>
 		</section>

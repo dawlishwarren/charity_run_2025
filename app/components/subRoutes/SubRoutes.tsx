@@ -46,7 +46,7 @@ export default function SubRoutes({ routes }) {
 				{availableRoutes.map(
 					(route, iteration) =>
 						route.description != null &&
-						route.description.includes('Mission') && (
+						route.description.includes('Leeds Liverpool') && (
 							<li key={route.id} className='py-3 my-3'>
 								<h3 className='pt-3 text-2xl'>{route.name}</h3>
 								<h4 className='pb-2'>

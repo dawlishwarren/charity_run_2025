@@ -21,16 +21,16 @@ export default async function Page() {
 	const fullRoute = await getRouteById('3347513386089739026');
 	return (
 		<main className='flex flex-col basis-auto justify-center md:items-center p-7 gap-y-14 bg-cyan-100'>
-			<h1 className='font-mono text-5xl'>Mission Mars Run</h1>
+			<h1 className='font-mono text-5xl'>Leeds Liverpool Run</h1>
 			<section id='summary' className='md:w-4xl'>
 				<h2 className='text-3xl'>Summary</h2>
 				<p className='py-3'>
 					A fundraising run from Leeds, starting in Rudy’s Headingley,
-					travelling to Manchester and on to Liverpool, connecting all of the
-					Mission Mars sites en route. The 100 mile route will be run in one,
-					starting in the evening of Sunday 17th of August and into the day of
-					Monday 18th, with plenty of options for runners and support to get
-					involved from anything 5km or less, all the way up to ultramarathon.
+					travelling to Manchester and on to Liverpool. The 100 mile route will
+					be run in one, starting in the evening of Sunday 17th of August and
+					into the day of Monday 18th, with plenty of options for runners and
+					support to get involved from anything 5km or less, all the way up to
+					ultramarathon.
 				</p>
 			</section>
 			<section id='charity' className='md:w-4xl'>
